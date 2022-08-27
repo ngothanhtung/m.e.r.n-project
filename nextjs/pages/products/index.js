@@ -3,7 +3,7 @@ import useSWR from 'swr';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function Index() {
+export default function Products() {
   const { data, error } = useSWR('/api/products', fetcher);
 
   if (error) return <div>Failed to load</div>;

@@ -11,7 +11,7 @@ const fetcher = async (url) => {
   return data;
 };
 
-export default function Products() {
+export default function Product() {
   const { query } = useRouter();
   const { data, error } = useSWR(() => query.id && `/api/products/${query.id}`, fetcher);
 
